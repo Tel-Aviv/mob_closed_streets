@@ -1,12 +1,19 @@
 import fetch from 'node-fetch';
 import sql from 'mssql';
 import moment from 'moment';
+import dotenv from 'dotenv';
+
+const env_load_result = dotenv.config();
+if( env_load_result.error ) {
+  console.error(env_load_result.error);
+  process.exit(1);
+}
 
 const config = {
-  user: 'bz_m_ppr',
-  password: 'h#452005',
-  server: '10.111.51.5',
-  database: 'db430'
+  user: process.env.user, //'bz_m_ppr',
+  password: process.env.password, // 'h#452005',
+  server: process.env.server, // '10.111.51.5',
+  database: process.env.database // 'db430'
 };
 
 fetch('https://api.tel-aviv.gov.il/gis/Layer?layerCode=680',
