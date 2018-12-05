@@ -10,10 +10,10 @@ if( env_load_result.error ) {
 }
 
 const config = {
-  user: process.env.user, //'bz_m_ppr',
-  password: process.env.password, // 'h#452005',
-  server: process.env.server, // '10.111.51.5',
-  database: process.env.database // 'db430'
+  user: process.env.user,
+  password: process.env.password,
+  server: process.env.server,
+  database: process.env.database
 };
 
 fetch('https://api.tel-aviv.gov.il/gis/Layer?layerCode=680',
