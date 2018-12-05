@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "build": "webpack -p",
+    "start": "nodemon ./dist/bundle.js --exec babel-node --presets es2015",
     "debug": "babel-node --inspect-brk index.js"
   },
   "license": "MIT",
@@ -11,6 +12,12 @@
     "babel-preset-es2015": "^6.24.1",
     "moment": "^2.22.2",
     "mssql": "^4.3.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.7",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }
