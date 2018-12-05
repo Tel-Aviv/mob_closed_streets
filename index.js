@@ -104,6 +104,7 @@ fetch('https://api.tel-aviv.gov.il/gis/Layer?layerCode=680',
 
               Promise.all(queries)
               .then( vals => {
+                console.log('All done');
                 process.exit(0);
               });
         }
