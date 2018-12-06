@@ -16,7 +16,7 @@ database=xxx
 
 ## CI
 This repo provides the definition of WebHook that sends <code>POST</code> requiests for pushes to this repo. In order to receive these request 
-1. Expose the destination server to the Internet with <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) should include the following:
+1. Expose the destination server to the Internet with <code>ngrok</code>. The [configuration](https://ngrok.com/docs) of ngrok (<code>ngrok.yml</code>) should include the following:
 ```
 authtoken: 2Fg2B5a5Dc616WfLkUX7k_7DRG44FJsq6XHpznf1axo
 http_proxy: "http://c1306948:Dfnc94^*7@forticache:8080"
