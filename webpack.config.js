@@ -19,7 +19,7 @@ var config = {
       }
     ]
   }
-  // externals: [nodeExternals()]
+//  externals: [nodeExternals()]
 }
 
 module.exports = config;
