@@ -15,7 +15,7 @@ database=xxx
 4. Run <code>node bundle.js</code> from destination server
 
 ## CI
-Destination server should be run GitHub WebHook. 
+Destination server should run GitHub WebHook. This repo provides 
 
 To expose internal server to Internet we use <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) includes the following:
 ```
