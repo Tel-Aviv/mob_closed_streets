@@ -3,5 +3,6 @@ node_js:
 - '8.12.0'
 os:
   - windows
+skip_cleanup: true  
 script:
   - yarn build
