@@ -16,6 +16,7 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
+    "https-proxy-agent": "^2.2.1",
     "moment": "^2.22.2",
     "mssql": "^4.3.0",
     "node-fetch": "^2.3.0",
