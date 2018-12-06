@@ -15,7 +15,8 @@ database=xxx
 4. Run <code>node bundle.js</code> from destination server
 
 ## CI
-Destination server should run GitHub WebHook. This repo provides 
+This repo provides the definition of WebHook that sends <code>POST</code> requiests for pushes to this repo. In order to receive these request, run 
+<code>babel-node webHook.js</code>
 
 To expose internal server to Internet we use <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) includes the following:
 ```
