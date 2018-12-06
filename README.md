@@ -15,10 +15,8 @@ database=xxx
 4. Run <code>node bundle.js</code> from destination server
 
 ## CI
-This repo provides the definition of WebHook that sends <code>POST</code> requiests for pushes to this repo. In order to receive these request, run 
-<code>babel-node webHook.js</code>
-
-To expose internal server to Internet we use <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) includes the following:
+This repo provides the definition of WebHook that sends <code>POST</code> requiests for pushes to this repo. In order to receive these request 
+1. Expose the destination server to the Internet with <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) should include the following:
 ```
 authtoken: 2Fg2B5a5Dc616WfLkUX7k_7DRG44FJsq6XHpznf1axo
 http_proxy: "http://c1306948:Dfnc94^*7@forticache:8080"
@@ -27,3 +25,6 @@ tunnels:
   proto: http
   addr: 4567
 ```
+2. After running <code>ngrok start mob_closed_streets</code>, you may change WebHook URL 
+3. Now run <code>babel-node webHook.js</code>
+
