@@ -1,4 +1,5 @@
 # mob_closed_streets
+[![Build Status](https://travis-ci.org/Tel-Aviv/mob_closed_streets.svg?branch=master)](https://travis-ci.org/Tel-Aviv/mob_closed_streets) 
 
 ## How to build/run
 1. Clone the repo and setup the project: <code>yarn install</code>
