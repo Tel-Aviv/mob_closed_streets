@@ -13,3 +13,16 @@ server=xxx
 database=xxx
 ```
 4. Run <code>node bundle.js</code> from destination server
+
+## CI
+Destination server should be run GitHub WebHook. 
+
+To expose internal server to Internet we use <code>ngrok</code>. The configuration of ngrok (<code>ngrok.yml</code>) includes the following:
+```
+authtoken: 2Fg2B5a5Dc616WfLkUX7k_7DRG44FJsq6XHpznf1axo
+http_proxy: "http://c1306948:Dfnc94^*7@forticache:8080"
+tunnels:
+ mob_closed_streets:
+  proto: http
+  addr: 4567
+```
