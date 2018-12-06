@@ -25,6 +25,6 @@ tunnels:
   proto: http
   addr: 4567
 ```
-2. After running <code>ngrok start mob_closed_streets</code>, you may change WebHook URL 
+2. After running <code>ngrok start mob_closed_streets</code>, you may change [Payload URL](https://github.com/Tel-Aviv/mob_closed_streets/settings/hooks/67810412)
 3. Now run <code>babel-node webHook.js</code>
 
