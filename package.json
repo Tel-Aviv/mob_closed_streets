@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p",
+    "build-dev": "babel-node ./src/buildBundle.js  --inspect-brk ",
     "serve": "babel-node ./dist/bundle.js dotenv_config_path=../ --presets es2015",
 
     "serve-dev": "babel-node ./src/index.js dotenv_config_path=../ --presets es2015",
@@ -12,7 +13,6 @@
   },
   "jest": {
     "bail": true,
-    "verbose": true,
     "coverageReporters": [
         "text"
     ]
