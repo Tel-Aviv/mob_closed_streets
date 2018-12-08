@@ -4,7 +4,7 @@ const path = require('path');
 var config = {
   target: 'node',
   entry: [
-    path.resolve(__dirname, './index.js')
+    path.resolve(__dirname, './src//index.js')
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
