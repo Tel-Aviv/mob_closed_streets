@@ -16,7 +16,6 @@ database=xxx
 4. Run <code>node bundle.js</code> from destination server
 
 ## CI
-[![Build Status][travis-badge]][travis]
 This repo provides the definition of WebHook that sends <code>POST</code> requiests for pushes to this repo. In order to receive these request 
 1. Expose the destination server to the Internet with <code>ngrok</code>. The [configuration](https://ngrok.com/docs) of ngrok (<code>ngrok.yml</code>) should include the following:
 ```
