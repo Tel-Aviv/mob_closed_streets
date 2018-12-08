@@ -1,7 +1,12 @@
 language: node_js
+
 node_js:
 - '8.12.0'
-os:
-  - windows
+
+sudo: false
+
+cache:
+  yarn: true
+
 script:
   - yarn test
