@@ -8,7 +8,14 @@
 
     "serve-dev": "babel-node ./src/index.js dotenv_config_path=../ --presets es2015",
     "debug": "babel-node --inspect-brk ./src/index.js dotenv_config_path=../",
-    "test": "jest --notify --detectOpenHandles"
+    "test": "jest --notify --coverage"
+  },
+  "jest": {
+    "bail": true,
+    "verbose": true,
+    "coverageReporters": [
+        "text"
+    ]
   },
   "license": "MIT",
   "dependencies": {
