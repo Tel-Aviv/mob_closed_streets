@@ -4,6 +4,10 @@ const path = require('path');
 
 describe('Bundle', () => {
 
+  beforeEach(() => {
+    jest.setTimeout(10000);
+  });
+
   test('Build bundle', done => {
 
     const compiler = webpack({
