@@ -8,7 +8,7 @@ script:
 - yarn test
 deploy:
   provider: releases
-  api_key: 963b59ab5852cb00738132edbc99cd2219a793bd
+  api_key: 6d87a11319c63305b48b47eec944b1d8970e28df
   file: "./dist/bundle.js"
   on:
     repo: Tel-Aviv/mob_closed_streets
