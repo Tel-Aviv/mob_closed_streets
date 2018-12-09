@@ -1,22 +1,16 @@
 language: node_js
-
 node_js:
-- '8.12.0'
-
+- 8.12.0
 sudo: false
-
 cache:
   yarn: true
-
 script:
-  - yarn test
-
+- yarn test
 deploy:
   provider: releases
-  skip-cleanup: true
+  skip_cleanup: true
   api_key: $GITHUB_TOKEN
-#  github-token: $GITHUB_TOKEN
-  file: "/dist/bundle.js"
-#  keep-history: true
+  file_glob: true
+  file: dist/build.js
   on:
-    branch: master
+    tags: true
