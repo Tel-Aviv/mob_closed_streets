@@ -9,7 +9,7 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  api_key: 348ce37bb30e0b9b0b502577030e1e216fecd7fe
+  api_key: $GITHUB_TOKEN
   file_glob: true
   file: dist/build.js
   on:
