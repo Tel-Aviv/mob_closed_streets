@@ -9,9 +9,8 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  api_key: 831911f0fa4585a1e66a19e3ca425e8c76a88229
+  api_key: 348ce37bb30e0b9b0b502577030e1e216fecd7fe
   file_glob: true
-  file:
-    - "dist/build.js"
+  file: dist/build.js
   on:
     tags: false
