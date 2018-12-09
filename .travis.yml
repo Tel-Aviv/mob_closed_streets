@@ -8,7 +8,8 @@ script:
 - yarn test
 deploy:
   provider: releases
-  api_key: $GITHUB_TOKEN
-  file: "./dist/bundle/js"
+  api_key: 831911f0fa4585a1e66a19e3ca425e8c76a88229
+  file:
+    - "dist/build.js"
   on:
-    repo: Tel-Aviv/mob_closed_streets
+    tags: true
