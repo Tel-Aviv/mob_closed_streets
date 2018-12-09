@@ -6,12 +6,16 @@ cache:
   yarn: true
 script:
 - yarn test
+before_deploy:
+  - export $TRAVIS_TAG='1.0.2'
+  - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   skip_cleanup: true
   api_key: $GITHUB_TOKEN
   file_glob: true
-  file: dist/build.js
+  file:
+     - dist/build.js
   overwrite: true
   on:
     tags: true
