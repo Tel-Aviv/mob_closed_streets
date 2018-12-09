@@ -13,4 +13,4 @@ deploy:
   file_glob: true
   file: dist/build.js
   on:
-    tags: false
+    tags: true
