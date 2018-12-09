@@ -12,5 +12,6 @@ deploy:
   api_key: $GITHUB_TOKEN
   file_glob: true
   file: dist/build.js
+  overwrite: true
   on:
     tags: true
