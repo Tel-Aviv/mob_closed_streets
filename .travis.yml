@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+- '8.12.0'
+
+sudo: false
+
+cache:
+  yarn: true
+
+script:
+  - yarn test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
