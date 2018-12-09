@@ -1,7 +1,8 @@
-import fetch from 'node-fetch';
 import sql from 'mssql';
 import moment from 'moment';
 import dotenv from 'dotenv';
+
+import fetchGIS from './fetchGIS';
 
 const env_load_result = dotenv.config();
 if( env_load_result.error ) {
@@ -9,17 +10,16 @@ if( env_load_result.error ) {
   process.exit(1);
 }
 
-const config = {
-  user: process.env.user,
-  password: process.env.password,
-  server: process.env.server,
-  database: process.env.database
-};
-
-fetch('https://api.tel-aviv.gov.il/gis/Layer?layerCode=680',
-      { method: 'GET'})
+fetchGIS()
 .then( res => res.json())
 .then( json => {
+
+  const config = {
+    user: process.env.user,
+    password: process.env.password,
+    server: process.env.server,
+    database: process.env.database
+  };
 
   sql.connect(config, err => {
     //console.log('Connected');
