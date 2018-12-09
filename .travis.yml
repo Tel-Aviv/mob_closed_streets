@@ -1,12 +1,14 @@
 language: node_js
-
 node_js:
-- '8.12.0'
-
+- 8.12.0
 sudo: false
-
 cache:
   yarn: true
-
 script:
-  - yarn test
+- yarn test
+deploy:
+  provider: releases
+  api_key: 963b59ab5852cb00738132edbc99cd2219a793bd
+  file: "./dist/bundle.js"
+  on:
+    repo: Tel-Aviv/mob_closed_streets
