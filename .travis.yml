@@ -10,7 +10,8 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key: 831911f0fa4585a1e66a19e3ca425e8c76a88229
+  file_glob: true
   file:
     - "dist/build.js"
   on:
-    tags: true
+    tags: false
