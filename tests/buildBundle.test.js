@@ -5,7 +5,7 @@ const path = require('path');
 describe('Bundle', () => {
 
   beforeEach(() => {
-    jest.setTimeout(10000);
+    jest.setTimeout(20000);
   });
 
   test('Build bundle', done => {
