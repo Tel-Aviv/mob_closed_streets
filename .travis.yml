@@ -12,9 +12,11 @@ script:
   - yarn test
 
 deploy:
-  provider: pages
+  provider: releases
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
+  api_key: $GITHUB_TOKEN
+#  github-token: $GITHUB_TOKEN
+  file: "/dist/bundle.js"
+#  keep-history: true
   on:
     branch: master
