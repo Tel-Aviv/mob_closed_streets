@@ -10,3 +10,9 @@ cache:
 
 script:
   - yarn test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  on:
+    branch: master
