@@ -10,7 +10,7 @@ app.use(express.json());
 
 const port = 4567;
 
-function pFetch(url) {
+function _fetch(url) {
   const proxyServer =  process.env.HTTP_PROXY ||
                       'http://forticache:8080';
   return fetch(url, {
@@ -23,7 +23,7 @@ app.post('/payload', (req, res) => {
   const assetsURL = req.body.release.assets_url;
   console.log(`Downloading from ${assetsURL}`);
 
-  pFetch(assetsURL)
+  _fetch(assetsURL)
   .then( res => res.json())
   .then( json => {
     console.log(`Assets list downloaded`);
@@ -31,18 +31,13 @@ app.post('/payload', (req, res) => {
       return item.name == BUNDLE_FILE_NAME
     });
     if( bundleItem ) {
-      return pFetch(bundleItem.browser_download_url);
+      return _fetch(bundleItem.browser_download_url);
     }
   })
-  .then( res => res.text() )
-  .then( content => {
-    fs.writeFile(BUNDLE_FILE_NAME, content, err => {
-      if( err )
-        console.error(`Error writing file: ${err}`);
-      else
-        console.log(`Successufully saved`);
-    });
-
+  .then( res => {
+    const dest = fs.createWriteStream(BUNDLE_FILE_NAME);
+    res.body.pipe(dest);
+    console.log(`Successufully saved`);
   })
   .catch(err => {
     console.error(err);

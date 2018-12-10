@@ -59,3 +59,4 @@ typings/
 
 # distrubution
 dist/
+bundle.js
