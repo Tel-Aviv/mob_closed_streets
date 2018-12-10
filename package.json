@@ -6,7 +6,6 @@
     "build": "webpack -p",
     "build-dev": "babel-node ./src/buildBundle.js  --inspect-brk ",
     "serve": "babel-node ./dist/bundle.js dotenv_config_path=../ --presets es2015",
-
     "serve-dev": "babel-node ./src/index.js dotenv_config_path=../ --presets es2015",
     "debug": "babel-node --inspect-brk ./src/index.js dotenv_config_path=../",
     "test": "jest --notify --coverage"
@@ -14,7 +13,7 @@
   "jest": {
     "bail": true,
     "coverageReporters": [
-        "text"
+      "text"
     ]
   },
   "license": "MIT",
@@ -35,7 +34,6 @@
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
     "jest": "^23.6.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-cli": "^3.1.2"
   }
 }
