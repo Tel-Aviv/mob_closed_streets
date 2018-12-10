@@ -11,7 +11,7 @@ deploy:
   skip_cleanup: true
   api_key: $GITHUB_TOKEN
   file_glob: true
-  file: dist/build.js
+  file: dist/bundle.js
   overwrite: true
   on:
     tags: true
