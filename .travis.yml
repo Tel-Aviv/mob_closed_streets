@@ -7,15 +7,17 @@ cache:
 script:
 - yarn test
 before_deploy:
-  - export TRAVIS_TAG='1.0.2'
+  - git config --local user.name "olegkleiman"
+  - git config --local user.email "oleg_kleyman@hotmail.com"
+  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
   - git tag $TRAVIS_TAG
 deploy:
   provider: releases
   skip_cleanup: true
   api_key: $GITHUB_TOKEN
   file_glob: true
-  file:
-     - dist/build.js
+  file: dist/build.js
+  draft: true
   overwrite: true
   on:
     tags: true
